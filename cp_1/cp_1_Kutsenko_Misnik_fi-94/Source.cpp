@@ -13,8 +13,8 @@
 
 using namespace std;
 
-//string etalon = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-string etalon = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя ";
+//string etalon = "Р°Р±РІРіРґРµС‘Р¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ";
+string etalon = "Р°Р±РІРіРґРµС‘Р¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ ";
 
 int main()
 {
@@ -30,7 +30,7 @@ int main()
 
     if (!fin.is_open()) 
     {
-        cout << "Ошибка открытия файла!" << endl;
+        cout << "РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°!" << endl;
     }
     else
     {
@@ -65,12 +65,12 @@ int main()
     }
     cout << "H1 = " << H1 << endl;
 
-    size_t position = str.find_first_of(";:.,/?-!*+=()&^%$@#1234567890—«»“”");
+    size_t position = str.find_first_of(";:.,/?-!*+=()&^%$@#1234567890вЂ”В«В»вЂњвЂќ");
 
     while (position != string::npos)
     {
         str.erase(position, 1);
-        position = str.find_first_of(";:.,/?-!*+=()&^%$@#1234567890—«»“”");
+        position = str.find_first_of(";:.,/?-!*+=()&^%$@#1234567890вЂ”В«В»вЂњвЂќ");
     }
 
     for (int i = 0; i <= str.length() - 1; ++i) {
